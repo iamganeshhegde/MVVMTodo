@@ -13,7 +13,7 @@ data class Task(
     val important:Boolean = false,
     val completed:Boolean = false,
     val created:Long = System.currentTimeMillis(),
-    @PrimaryKey(autoGenerate = true) val primaryKey:Int = 0
+    @PrimaryKey(autoGenerate = true) val id:Int = 1
 ):Parcelable {
     val createdDateFormatted:String
     get() = DateFormat.getDateTimeInstance().format(created)
