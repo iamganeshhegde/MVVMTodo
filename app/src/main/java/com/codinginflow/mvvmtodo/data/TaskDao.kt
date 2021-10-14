@@ -13,7 +13,7 @@ interface TaskDao {
     suspend fun update(task: Task)
 
     @Delete
-    suspend fun delete()
+    suspend fun delete(task: Task)
 
     @Query("SELECT *FROM TASK_TABLE")
     fun getTasks():Flow<List<Task>>
