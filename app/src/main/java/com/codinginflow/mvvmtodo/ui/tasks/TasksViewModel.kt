@@ -23,18 +23,3 @@ class TasksViewModel @ViewModelInject constructor(
     val tasks = taskFlow.asLiveData()
 
 }
-
-
-// 1,2,3,4,5,6
-
-fun maxCoins(A: IntArray): Int {
-    Arrays.sort(A)
-    var res = 0
-    val n = A.size
-    var i = n / 3
-    while (i < n) {
-        res += A[i]
-        i += 2
-    }
-    return res
-}
